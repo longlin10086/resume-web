@@ -1,0 +1,100 @@
+[header]
+name="李龙麟的个人简介"
+
+[titles]
+education = "教育背景"
+projects = "项目开发"
+clubs = "社团活动"
+skills = "专业技能"
+misc = "其他"
+
+[info]
+name = "李龙麟"
+phone = "(+86) 19919198100"
+email = "email@example.com"
+github_username = "longlin10086"
+blog = "blog.example.com"
+position = ["下北泽", "深渊"]
+
+[education]
+school = "月之森女子学园"
+description = "小祥不在的学校"
+year = "2023.07 - 不登校"
+major = "高中，乐队"
+contents = ["苦啦兮苦乐队成员", "mygo 乐队成员"]
+
+[[clubs]]
+name = "HITSZ OSA 开源技术协会"
+description = "社团主席团成员"
+year = "2023.10 - 至今"
+
+[[clubs]]
+name = "HITSZ 南工骁鹰机器人战队"
+description = "算法组成员"
+year = "2023.11 - 2024.09"
+contents = [
+    "基于 Boost 开发的串口解析工具;",
+    "基于 PySide6 开发的节点监视面板。"
+]
+
+[[projects]]
+name = "hoa.moe"
+subtitle = "面向 HITSZ 自动化学生的课程攻略共享计划。"
+description = "合作项目，旨在帮助学生更好地了解专业课程"
+gh_url = "https://github.com/HITSZ-OpenAuto/hoa-moe"
+contents = [
+    "(主要开发者)参与了前端设计与 CI/CD 脚本构建;",
+    "基于 Hugo 架构搭建现代网页前端，方便用户阅读访问;",
+    "后端通过爬虫定期抓取各课程仓库 README 文本并提供给前端展示;",
+    "目前已获得 100K+ 次访问。"
+]
+
+[[projects]]
+name = "speak-insincerely"
+subtitle = " 一个关于大语言模型的小游戏。"
+description = "个人项目，玩家在遵守规则前提下让大语言模型给出特定回答"
+gh_url = "https://github.com/longlin10086/speak-insincerely"
+contents = [
+    "前端基于 Gradio 框架开发，可以方便地添加目标组件;",
+    "后端接入大语言模型，消息收发异步进行，保证隔离性;",
+    "使用 docker 进行快速部署。"
+]
+
+[[projects]]
+name = "HITSZ-Login-Panel"
+subtitle = " 学校系统登录界面"
+description = "个人项目，一个整洁美观的登录界面"
+gh_url = "https://github.com/longlin10086/HITSZ-GPT-Panel-LoginPage"
+contents = [
+    "使用原生 Vue3 编写，采用单文件组件架构组织项目;",
+    "响应式布局，能同时满足桌面端和移动端的需求。",
+]
+
+[skills]
+contents = [
+    "git",
+    "docker",
+    "c",
+    "cpp",
+    "vim",
+    "bash",
+    "cmake",
+    "html",
+    "css",
+    "latex",
+    "linux",
+    "md",
+    "nginx",
+    "py",
+    "qt"
+]
+
+[misc]
+contents = [
+    "语言： 中文、英文(CET-6)。"
+]
+languages = ["中文", "英文(CET-6)"]
+
+
+
+
