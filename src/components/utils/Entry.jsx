@@ -1,4 +1,5 @@
 import GhLink from "./GhLink";
+import { RiExternalLinkLine } from "react-icons/ri";
 
 function Entry({
   tl = "",
@@ -20,21 +21,36 @@ function Entry({
   return (
     <div className="w-full mt-1 flex-row justify-start items-center mb-2">
       <div className="flex justify-between items-start">
-        <div className="flex justify-start items-center flex-wrap">
+        <div className="flex justify-start items-center flex-wrap overflow-auto">
           <h2 className="font-bold text-nowrap">{tl}</h2>
           <h2
             className={
-              tl_comment ? "before:content-['·'] before:mx-1 text-pretty" : ""
+              tl_comment
+                ? "before:content-['·'] before:mx-1 text-nowrap hidden sm:block text-sm"
+                : ""
             }
           >
             {tl_comment}
           </h2>
+          {is_git ? (
+            <a href={tr}>
+              <RiExternalLinkLine className="block sm:hidden mx-1" />
+            </a>
+          ) : (
+            <div></div>
+          )}
         </div>
-        {is_git ? <GhLink base_link={remain_path} /> : <p>{tr}</p>}
+        <div className="">
+          {is_git ? (
+            <GhLink base_link={remain_path} className="hidden sm:flex" />
+          ) : (
+            <p className="text-nowrap">{tr}</p>
+          )}
+        </div>
       </div>
 
       <div className="flex justify-between items-center">
-        <h2 className="font-bold">{bl}</h2>
+        <h2 className="font-bold text-nowrap overflow-auto">{bl}</h2>
         <p>{br}</p>
       </div>
 
