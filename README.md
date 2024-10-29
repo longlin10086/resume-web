@@ -6,8 +6,8 @@
 
 ## TODO
 
-- [ ] 修改匹配移动端样式
+- [x] 修改匹配移动端样式
 - [ ] 添加暗色主题
 - [ ] 中英文切换
 - [ ] 修改 skills 模块
-- [ ] 增添 docker-compose
+- [x] 增添 docker-compose
