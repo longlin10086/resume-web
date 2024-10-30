@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import ItemList from "./ItemList";
 import Hr from "./utils/Hr";
 import Entry from "./utils/Entry";
@@ -14,11 +16,21 @@ const skills = config.titles.skills;
 const misc = config.titles.misc;
 
 function Page() {
+  const [blur, setBlur] = useState("6px");
+  const onBlur = () => {
+    setBlur("0px");
+  };
+
   return (
     <div className="bg-white w-full h-full min-w-3xl max-w-3xl min-h-[92vh] max-h-[92vh] shadow-2xl rounded-sm overflow-y-auto">
       <div className="mx-8 my-8 font-zhuque overflow-auto">
-        <h1 className="text-4xl mb-2 font-bold">{name}</h1>
-        <ItemList />
+        <div
+          onDoubleClick={onBlur}
+          className={`text-4xl mb-2 font-bold blur-[${blur}] ease-in-out duration-300`}
+        >
+          {name}
+        </div>
+        <ItemList blur={blur} />
         <Hr />
 
         <h2 className="font-bold text-xl">{education}</h2>

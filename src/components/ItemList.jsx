@@ -10,14 +10,16 @@ const mail_url = "mailto:" + config.info.email;
 const git_url = "https://github.com/" + config.info.github_username;
 const blog_url = "https://" + config.info.blog;
 
-function ItemList() {
+function ItemList({ blur }) {
   return (
     <div className="mb-2 flex justify-start items-center flex-wrap">
-      <p className="before:content-['☎️'] before:mx-0.5 after:content-['|'] after:mx-0.5">
-        {config.info.phone}
-      </p>
       <div
-        className={`flex justify-start items-end before:mx-0.5 after:content-['|'] after:mx-0.5`}
+        className={`before:content-['☎️'] before:mx-0.5 after:content-['|'] after:mx-0.5 blur-[${blur}] ease-in-out duration-300`}
+      >
+        {config.info.phone}
+      </div>
+      <div
+        className={`flex justify-start items-end before:mx-0.5 after:content-['|'] after:mx-0.5 blur-[${blur}] ease-in-out duration-300`}
       >
         <IoIosMail />
         <Link href={mail_url} text={config.info.email} />
@@ -36,7 +38,7 @@ function ItemList() {
       </div>
       <div className={`flex justify-start items-center before:mx-0.5`}>
         <GiPositionMarker />
-        <p>{config.info.position.join(", ")}</p>
+        <div>{config.info.position.join(", ")}</div>
       </div>
     </div>
   );
