@@ -7,7 +7,7 @@ function App() {
       <div className="justify-center flex">
         <Header />
       </div>
-      <div className="flex justify-center my-2 w-full min-h-[90vh]">
+      <div className="flex justify-center my-0 md:my-2 w-full min-h-[90vh]">
         <Page />
       </div>
     </div>
