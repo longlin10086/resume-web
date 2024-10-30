@@ -19,6 +19,20 @@ export default {
     fontFamily: {
       zhuque: "Zhuque",
     },
+    keyframes: {
+      slideUp: {
+        from: { transform: "translateY(100%)" },
+        to: { transform: "translateY(0)" },
+      },
+      slideDown: {
+        from: { transform: "translateY(-100%)" },
+        to: { transform: "translateY(0)" },
+      },
+    },
+    animation: {
+      slideUp: "slideUp 0.5s ease-in-out forwards",
+      slideDown: "slideDown 0.7s ease-in-out forwards",
+    },
   },
   plugins: [
     plugin(function ({ matchUtilities, theme }) {

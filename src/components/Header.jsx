@@ -13,7 +13,7 @@ function Header() {
   return (
     <header
       className="w-full min-w-full md:min-w-max max-w-xs sm:max-w-5xl min-h-12 bg-neutral-50/[0.88] top-0 z-10 md:rounded-b-3xl md:mb-1 shadow-xl 
-    text-black sticky"
+    text-black sticky animate-slideDown"
     >
       <div className="ml-4 md:ml-20 mr-4 md:mr-10 mb-2 mt-1 flex max-w-full justify-between items-center">
         <div className="flex mx-2 text-nowrap">

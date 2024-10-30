@@ -22,7 +22,7 @@ function Page() {
   };
 
   return (
-    <div className="bg-white w-full h-full min-w-3xl max-w-3xl min-h-[92vh] max-h-[92vh] shadow-2xl rounded-sm overflow-y-auto">
+    <div className="bg-white w-full h-full min-w-3xl max-w-3xl min-h-[92vh] max-h-[92vh] shadow-2xl rounded-sm overflow-y-auto animate-slideUp">
       <div className="mx-8 my-8 font-zhuque overflow-auto">
         <div
           onDoubleClick={onBlur}
@@ -33,7 +33,9 @@ function Page() {
         <ItemList blur={blur} />
         <Hr />
 
-        <h2 className="font-bold text-xl">{education}</h2>
+        <h2 className="before:content-['🎓'] before:mr-1 font-bold text-xl">
+          {education}
+        </h2>
         <Entry
           tl={config.education.school}
           tl_comment={config.education.description}
@@ -43,7 +45,9 @@ function Page() {
         />
         <Hr />
 
-        <h2 className="font-bold text-xl">{projects}</h2>
+        <h2 className="before:content-['🔨'] before:mr-1 font-bold text-xl">
+          {projects}
+        </h2>
         {config.projects.map((project, index) => {
           return (
             <Entry
@@ -58,7 +62,9 @@ function Page() {
         })}
         <Hr />
 
-        <h2 className="font-bold text-xl">{clubs}</h2>
+        <h2 className="before:content-['🏫'] before:mr-1 font-bold text-xl">
+          {clubs}
+        </h2>
         {config.clubs.map((club, index) => {
           return (
             <Entry
@@ -73,11 +79,15 @@ function Page() {
         })}
         <Hr />
 
-        <h2 className="font-bold text-xl">{skills}</h2>
+        <h2 className="before:content-['🧱'] before:mr-1 font-bold text-xl">
+          {skills}
+        </h2>
         <SkillsIcon skills={config.skills.contents} />
         <Hr />
 
-        <h2 className="font-bold text-xl">{misc}</h2>
+        <h2 className="before:content-['ℹ️'] before:mr-1 font-bold text-xl">
+          {misc}
+        </h2>
         {config.misc.contents.map((content, index) => (
           <p key={index}>{content}</p>
         ))}
