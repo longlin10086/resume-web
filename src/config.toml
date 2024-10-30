@@ -10,18 +10,22 @@ misc = "其他"
 
 [info]
 name = "李龙麟"
-phone = "(+86) 19919198100"
-email = "email@example.com"
+phone = "(+86) 155-xxxx-xxxx"
+email = "gnulonglin@gmail.com"
 github_username = "longlin10086"
-blog = "blog.example.com"
-position = ["下北泽", "深渊"]
+blog = "blog.longlin.tech"
+position = ["深圳", "广州"]
 
 [education]
-school = "月之森女子学园"
-description = "小祥不在的学校"
-year = "2023.07 - 不登校"
-major = "高中，乐队"
-contents = ["苦啦兮苦乐队成员", "mygo 乐队成员"]
+school = "哈尔滨工业大学(深圳)"
+year = "2022.09 - 2026.06(预计)"
+major = "本科，自动化"
+contents = [
+    "第一届 405杯CTF夺旗赛 最佳极客",
+    "RoboMaster 2024 机甲大师超级对抗赛·区域赛(南部赛区) 一等奖", 
+    "RoboMaster 2024 机甲大师超级对抗赛·全国赛 二等奖",
+    "2023 年全国大学生数学建模竞赛 三等奖"
+]
 
 [[clubs]]
 name = "HITSZ OSA 开源技术协会"
@@ -72,28 +76,27 @@ contents = [
 
 [skills]
 contents = [
-    "git",
-    "docker",
-    "c",
-    "cpp",
-    "vim",
-    "bash",
-    "cmake",
     "html",
     "css",
-    "latex",
+    "javascript",
+    "vue",
+    "react",
+    "vite",
+    "qt",
+    "c",
+    "cpp",
+    "cmake",
+    "python",
+    "git",
+    "docker",
     "linux",
-    "md",
     "nginx",
-    "py",
-    "qt"
 ]
 
 [misc]
 contents = [
     "语言： 中文、英文(CET-6)。"
 ]
-languages = ["中文", "英文(CET-6)"]
 
 
 
