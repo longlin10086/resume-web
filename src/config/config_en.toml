@@ -1,0 +1,101 @@
+[header]
+name="Longlin's Resume"
+
+[titles]
+education = "Education"
+projects = "Projects"
+clubs = "Clubs"
+skills = "Skills"
+misc = "Misc"
+
+[info]
+name = "longlin li"
+phone = "(+86) 155-xxxx-xxxx"
+email = "gnulonglin@gmail.com"
+github_username = "longlin10086"
+blog = "blog.longlin.tech"
+position = ["Shen Zhen"]
+
+[education]
+school = "Harbin Institute of Technology (Shenzhen)"
+year = "2022.09 - 2026.06(expected)"
+major = "Undergraduate, School of Mechatronics Engineering and Automation"
+contents = [
+    "Oct. 2024, Best Hacker Award at the First 405 CTF Competition",
+    "May 2024, RoboMaster University Championship (RMUC) 2024, Southern Regional Competition, First Prize.", 
+    "Aug. 2024, RoboMaster University Championship (RMUC) 2024, National Competition, Second Prize.",
+    "Sept. 2023, China Undergraduate Mathematical Contest in Modeling (CUMCM), Provincial Third Prize."
+]
+
+[[clubs]]
+name = "HITSZ Open Source Association (a.k.a. OSA)"
+description = "Core Member"
+year = "2023.10 - Now"
+
+[[clubs]]
+name = "HITSZ Robomaster team 南工骁鹰"
+description = "Algorithm Group Member"
+year = "2023.11 - 2024.09"
+contents = [
+    "Serial port parsing tool developed using Boost;",
+    "Node monitoring panel developed using PySide6."
+]
+
+[[projects]]
+name = "hoa.moe"
+subtitle = "Course Strategy Sharing Platform for HITSZ Automation Students"
+description = "Collaborative project aimed at helping students better understand professional courses"
+gh_url = "https://github.com/HITSZ-OpenAuto/hoa-moe"
+contents = [
+    "(Main developer) Participated in frontend design and CI/CD script development;",
+    "Built a modern web frontend based on Hugo architecture for convenient user reading and access;",
+    "Backend periodically crawls README texts from course repositories and provides them for frontend display;",
+    "Currently achieved 100K+ visits."
+]
+[[projects]]
+name = "speak-insincerely"
+subtitle = "A Small Game about Large Language Models"
+description = "Personal project where players guide large language models to provide specific responses within given rules"
+gh_url = "https://github.com/longlin10086/speak-insincerely"
+contents = [
+    "Frontend developed using Gradio framework, enabling easy addition of target components;",
+    "Backend integrates large language models with asynchronous message sending and receiving, ensuring isolation;",
+    "Deployed quickly using Docker."
+]
+[[projects]]
+name = "HITSZ-Login-Panel"
+subtitle = "School System Login Interface"
+description = "Personal project, a clean and aesthetic login interface"
+gh_url = "https://github.com/longlin10086/HITSZ-GPT-Panel-LoginPage"
+contents = [
+    "Written in native Vue3, using single-file component architecture to organize the project;",
+    "Responsive layout that meets the needs of both desktop and mobile platforms.",
+]
+
+[skills]
+contents = [
+    "html",
+    "css",
+    "javascript",
+    "vue",
+    "react",
+    "vite",
+    "qt",
+    "c",
+    "cpp",
+    "cmake",
+    "python",
+    "git",
+    "docker",
+    "linux",
+    "nginx",
+]
+
+[misc]
+contents = [
+    "Languages: Chinese, English(CET-6)"
+]
+
+
+
+

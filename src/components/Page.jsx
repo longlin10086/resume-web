@@ -1,36 +1,29 @@
-import { useState } from "react";
-
 import ItemList from "./ItemList";
 import Hr from "./utils/Hr";
 import Entry from "./utils/Entry";
-import GhLink from "./utils/GhLink";
 import SkillsIcon from "./utils/SkillsIcon";
-
-import config from "../config.toml";
-
-const name = config.info.name;
-const education = config.titles.education;
-const projects = config.titles.projects;
-const clubs = config.titles.clubs;
-const skills = config.titles.skills;
-const misc = config.titles.misc;
+import { useSwitchLang } from "./utils/SwitchLang";
 
 function Page() {
-  const [blur, setBlur] = useState("6px");
-  const onBlur = () => {
-    setBlur("0px");
-  };
+  const { config, language, setLanguage } = useSwitchLang();
 
+  if (!config) {
+    return null; // Or a loading state
+  }
+
+  let name = config.info.name;
+  let education = config.titles.education;
+  let projects = config.titles.projects;
+  let clubs = config.titles.clubs;
+  let skills = config.titles.skills;
+  let misc = config.titles.misc;
   return (
     <div className="bg-white w-full h-full z-20 min-w-3xl max-w-3xl min-h-[92vh] max-h-[92vh] shadow-2xl rounded-sm overflow-y-auto animate-slideUp">
       <div className="mx-8 my-8 font-zhuque overflow-auto">
-        <div
-          onDoubleClick={onBlur}
-          className={`text-4xl mb-2 font-bold blur-[${blur}] ease-in-out duration-300`}
-        >
+        <div className={`text-4xl mb-2 font-bold ease-in-out duration-300`}>
           {name}
         </div>
-        <ItemList blur={blur} />
+        <ItemList />
         <Hr />
 
         <h2 className="before:content-['🎓'] before:mr-1 font-bold text-xl">

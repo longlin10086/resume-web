@@ -10,9 +10,10 @@
 - [x] 增添 docker-compose
 - [x] 修改 skills 模块
 - [x] 修改 head-bar 样式
-- [ ] Loading 动画效果
+- [x] Loading 动画效果
 - [ ] 添加暗色主题
-- [ ] 中英文切换
+- [x] 中英文切换
 - [x] 页脚 footer 设计
 - [x] PDF Download 按钮
 - [ ] 增添 TOC 页面
+- [ ] 英文界面响应式设计

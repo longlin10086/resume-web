@@ -5,13 +5,19 @@ import { GiPositionMarker } from "react-icons/gi";
 import { IconContext } from "react-icons";
 import Link from "./utils/Link";
 
-import config from "../config.toml";
-
-const mail_url = "mailto:" + config.info.email;
-const git_url = "https://github.com/" + config.info.github_username;
-const blog_url = "https://" + config.info.blog;
+import { useSwitchLang } from "./utils/SwitchLang";
 
 function ItemList({ blur }) {
+  const { config, language, setLanguage } = useSwitchLang();
+
+  if (!config) {
+    return null; // Or a loading state
+  }
+
+  let mail_url = "mailto:" + config.info.email;
+  let git_url = "https://github.com/" + config.info.github_username;
+  let blog_url = "https://" + config.info.blog;
+
   return (
     <div className="mb-2 flex justify-start items-center flex-wrap">
       <div

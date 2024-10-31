@@ -2,14 +2,20 @@ import { FaFileDownload } from "react-icons/fa";
 import { RiExternalLinkLine } from "react-icons/ri";
 import { PiSunLight } from "react-icons/pi";
 import { IconContext } from "react-icons";
-import { HiTranslate } from "react-icons/hi";
 import { FaListUl } from "react-icons/fa";
 
-import config from "../config.toml";
+import I18nButton from "./buttons/I18nButton";
 
-const title = config.header.name;
+import { useSwitchLang } from "./utils/SwitchLang";
 
 function Header() {
+  const { config, language, setLanguage } = useSwitchLang();
+
+  if (!config) {
+    return null; // Or a loading state
+  }
+  let title = config.header.name;
+
   return (
     <header
       className="w-full min-w-full md:min-w-max max-w-xs sm:max-w-5xl min-h-12 bg-neutral-50/[0.88] top-0 z-30 md:rounded-b-3xl md:mb-1 shadow-xl 
@@ -48,8 +54,6 @@ function Header() {
             </div>
           </div>
 
-          {/* <div className="font-zhuque text-lg mx-5">|</div> */}
-
           <button className="hidden sm:flex justify-center items-center border-3 rounded-full bg-neutral-100/95 hover:ring-2 hover:ring-blue-500/50 ease-in-out duration-500 mt-1">
             <div className="m-2.5 shadow-2xl z-10">
               <IconContext.Provider value={{ size: `23px` }}>
@@ -60,15 +64,7 @@ function Header() {
             </div>
           </button>
 
-          <button className="hidden sm:flex justify-center items-center border-3 rounded-full bg-neutral-100/95 hover:ring-2 hover:ring-blue-500/50 ease-in-out duration-500 mt-1 mx-2">
-            <div className="m-2.5 shadow-2xl z-10">
-              <IconContext.Provider value={{ size: `23px` }}>
-                <div>
-                  <HiTranslate />
-                </div>
-              </IconContext.Provider>
-            </div>
-          </button>
+          <I18nButton />
 
           <button className="flex justify-center items-center border-3 rounded-full bg-neutral-100/95 hover:ring-2 hover:ring-blue-500/50 ease-in-out duration-500 mt-1 mx-2 sm:hidden">
             <div className="m-2.5 shadow-2xl z-10">
