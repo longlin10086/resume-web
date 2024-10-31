@@ -22,7 +22,7 @@ function Page() {
   };
 
   return (
-    <div className="bg-white w-full h-full min-w-3xl max-w-3xl min-h-[92vh] max-h-[92vh] shadow-2xl rounded-sm overflow-y-auto animate-slideUp">
+    <div className="bg-white w-full h-full z-20 min-w-3xl max-w-3xl min-h-[92vh] max-h-[92vh] shadow-2xl rounded-sm overflow-y-auto animate-slideUp">
       <div className="mx-8 my-8 font-zhuque overflow-auto">
         <div
           onDoubleClick={onBlur}

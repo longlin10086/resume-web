@@ -13,6 +13,6 @@
 - [ ] Loading 动画效果
 - [ ] 添加暗色主题
 - [ ] 中英文切换
-- [ ] 页脚 footer 设计
+- [x] 页脚 footer 设计
 - [x] PDF Download 按钮
 - [ ] 增添 TOC 页面
