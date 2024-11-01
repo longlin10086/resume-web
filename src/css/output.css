@@ -842,12 +842,20 @@ video {
   overflow-y: auto;
 }
 
+.text-wrap {
+  text-wrap: wrap;
+}
+
 .text-nowrap {
   text-wrap: nowrap;
 }
 
 .text-balance {
   text-wrap: balance;
+}
+
+.text-pretty {
+  text-wrap: pretty;
 }
 
 .rounded-full {
@@ -1073,14 +1081,94 @@ video {
   content: var(--tw-content);
 }
 
+.before\:content-\[\'11\'\]::before {
+  --tw-content: '11';
+  content: var(--tw-content);
+}
+
+.before\:content-\[\$\{tr\}\]::before {
+  --tw-content: ${tr};
+  content: var(--tw-content);
+}
+
+.before\:content-\[\'\$\{tr\}\'\]::before {
+  --tw-content: '${tr}';
+  content: var(--tw-content);
+}
+
+.before\:content-\[\'2022\.09-2026\.06\(expected\)\'\]::before {
+  --tw-content: '2022.09-2026.06(expected)';
+  content: var(--tw-content);
+}
+
+.before\:content-\[\"\$\{tr\}\"\]::before {
+  --tw-content: "${tr}";
+  content: var(--tw-content);
+}
+
+.before\:content-\[\"\$\{tr\.toString\(\)\}\"\]::before {
+  --tw-content: "${tr.toString()}";
+  content: var(--tw-content);
+}
+
+.before\:content-\[\$\{is_git\}\]::before {
+  --tw-content: ${is git};
+  content: var(--tw-content);
+}
+
+.before\:content-\[\'\$\{is_git\}\'\]::before {
+  --tw-content: '${is git}';
+  content: var(--tw-content);
+}
+
+.before\:content-\[\'0\'\]::before {
+  --tw-content: '0';
+  content: var(--tw-content);
+}
+
+.before\:content-\[\'attr\(\$\{tr\}\)\'\]::before {
+  --tw-content: 'attr(${tr})';
+  content: var(--tw-content);
+}
+
+.before\:content-\[attr\(\$\{tr\}\)\]::before {
+  --tw-content: attr(${tr});
+  content: var(--tw-content);
+}
+
+.before\:content-\[attr\(before\)\]::before {
+  --tw-content: attr(before);
+  content: var(--tw-content);
+}
+
 .after\:mx-0\.5::after {
   content: var(--tw-content);
   margin-left: 0.125rem;
   margin-right: 0.125rem;
 }
 
+.after\:ml-1::after {
+  content: var(--tw-content);
+  margin-left: 0.25rem;
+}
+
+.after\:ml-2::after {
+  content: var(--tw-content);
+  margin-left: 0.5rem;
+}
+
+.after\:ml-4::after {
+  content: var(--tw-content);
+  margin-left: 1rem;
+}
+
 .after\:content-\[\'\|\'\]::after {
   --tw-content: '|';
+  content: var(--tw-content);
+}
+
+.after\:content-\[attr\(before\)\]::after {
+  --tw-content: attr(before);
   content: var(--tw-content);
 }
 
@@ -1125,6 +1213,16 @@ video {
   .sm\:max-w-5xl {
     max-width: 64rem;
   }
+
+  .sm\:before\:content-none::before {
+    --tw-content: none;
+    content: var(--tw-content);
+  }
+
+  .sm\:after\:content-none::after {
+    --tw-content: none;
+    content: var(--tw-content);
+  }
 }
 
 @media (min-width: 768px) {
@@ -1147,6 +1245,10 @@ video {
 
   .md\:mt-1 {
     margin-top: 0.25rem;
+  }
+
+  .md\:block {
+    display: block;
   }
 
   .md\:min-h-screen {
@@ -1176,6 +1278,11 @@ video {
   .md\:rounded-t-2xl {
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
+  }
+
+  .md\:before\:content-none::before {
+    --tw-content: none;
+    content: var(--tw-content);
   }
 }
 
