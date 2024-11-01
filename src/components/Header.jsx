@@ -2,9 +2,9 @@ import { FaFileDownload } from "react-icons/fa";
 import { RiExternalLinkLine } from "react-icons/ri";
 import { PiSunLight } from "react-icons/pi";
 import { IconContext } from "react-icons";
-import { FaListUl } from "react-icons/fa";
 
 import I18nButton from "./buttons/I18nButton";
+import ListButton from "./buttons/ListButton";
 
 import { useSwitchLang } from "./utils/SwitchLang";
 
@@ -48,7 +48,7 @@ function Header() {
                 href="https://github.com/longlin10086/resume-web"
                 className="mx-1 hover:text-cyan-600"
               >
-                Download PDF
+                {language === "en" ? "Download PDF" : "PDF 下载"}
               </a>
               <FaFileDownload />
             </div>
@@ -66,15 +66,7 @@ function Header() {
 
           <I18nButton />
 
-          <button className="flex justify-center items-center border-3 rounded-full bg-neutral-100/95 hover:ring-2 hover:ring-blue-500/50 ease-in-out duration-500 mt-1 mx-2 sm:hidden">
-            <div className="m-2.5 shadow-2xl z-10">
-              <IconContext.Provider value={{ size: `18px` }}>
-                <div>
-                  <FaListUl />
-                </div>
-              </IconContext.Provider>
-            </div>
-          </button>
+          <ListButton />
         </div>
       </div>
     </header>
