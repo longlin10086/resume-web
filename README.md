@@ -11,7 +11,7 @@
 - [x] 修改 skills 模块
 - [x] 修改 head-bar 样式
 - [x] Loading 动画效果
-- [ ] 添加暗色主题
+- [x] 添加暗色主题
 - [x] 中英文切换
 - [x] 页脚 footer 设计
 - [x] PDF Download 按钮

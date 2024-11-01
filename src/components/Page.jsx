@@ -18,11 +18,9 @@ function Page() {
   let skills = config.titles.skills;
   let misc = config.titles.misc;
   return (
-    <div className="bg-white w-full h-full z-20 min-w-3xl max-w-3xl min-h-[92vh] max-h-[92vh] shadow-2xl rounded-sm overflow-y-auto animate-slideUp">
+    <div className="bg-white dark:bg-[#121212]/[0.9] dark:text-neutral-300 w-full h-full z-20 min-w-3xl max-w-3xl min-h-[92vh] max-h-[92vh] shadow-2xl rounded-sm overflow-y-auto animate-slideUp ease-in-out duration-300">
       <div className="mx-8 my-8 font-zhuque overflow-auto">
-        <div className={`text-4xl mb-2 font-bold ease-in-out duration-300`}>
-          {name}
-        </div>
+        <div className={`text-4xl mb-2 font-bold ease-in-out`}>{name}</div>
         <ItemList />
         <Hr />
 

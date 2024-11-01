@@ -5,10 +5,12 @@ const plugin = require("tailwindcss/plugin");
 
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  darkMode: "class",
   theme: {
     extend: {
       backgroundImage: {
         hero: "url('/images/anime-blue.jpg')",
+        dkhero: "url('/images/anime-black.jpg')",
       },
       textShadow: {
         sm: "0 1px 2px var(--tw-shadow-color)",

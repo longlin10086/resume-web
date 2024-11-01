@@ -5,6 +5,7 @@ import { IconContext } from "react-icons";
 
 import I18nButton from "./buttons/I18nButton";
 import ListButton from "./buttons/ListButton";
+import ThemeButton from "./buttons/ThemeButton";
 
 import { useSwitchLang } from "./utils/SwitchLang";
 
@@ -18,14 +19,14 @@ function Header() {
 
   return (
     <header
-      className="w-full min-w-full md:min-w-max max-w-xs sm:max-w-5xl min-h-12 bg-neutral-50/[0.88] top-0 z-30 md:rounded-b-3xl md:mb-1 shadow-xl 
-    text-black sticky animate-slideDown"
+      className="w-full min-w-full md:min-w-max max-w-xs sm:max-w-5xl min-h-12 bg-neutral-50/[0.88] dark:bg-neutral-950 top-0 z-30 md:rounded-b-3xl md:mb-1 shadow-xl 
+    text-black dark:text-white sticky animate-slideDown"
     >
       <div className="ml-4 md:ml-20 mr-4 md:mr-10 mb-2 mt-1 flex max-w-full justify-between items-center">
         <div className="flex mx-2 text-nowrap">
           <a
             href="#"
-            className="text-xl text-slate-950 hover:text-cyan-600 m-2 flex-row items-start font-zhuque font-bold before:content-['📄'] mx-0.5"
+            className="text-xl dark:text-slate-50 text-slate-950 hover:text-cyan-600 m-2 flex-row items-start font-zhuque font-bold before:content-['📄'] mx-0.5"
           >
             {title}
           </a>
@@ -40,7 +41,12 @@ function Header() {
               >
                 GitHub
               </a>
-              <RiExternalLinkLine />
+              <div className="hidden dark:block">
+                <RiExternalLinkLine style={{ fill: "white" }} />
+              </div>
+              <div className="dark:hidden">
+                <RiExternalLinkLine style={{ fill: "black" }} />
+              </div>
             </div>
 
             <div className="flex justify-center items-center ml-4 mr-20">
@@ -50,19 +56,17 @@ function Header() {
               >
                 {language === "en" ? "Download PDF" : "PDF 下载"}
               </a>
-              <FaFileDownload />
+
+              <div className="hidden dark:block">
+                <FaFileDownload style={{ fill: "white" }} />
+              </div>
+              <div className="dark:hidden">
+                <FaFileDownload style={{ fill: "black" }} />
+              </div>
             </div>
           </div>
 
-          <button className="hidden sm:flex justify-center items-center border-3 rounded-full bg-neutral-100/95 hover:ring-2 hover:ring-blue-500/50 ease-in-out duration-500 mt-1">
-            <div className="m-2.5 shadow-2xl z-10">
-              <IconContext.Provider value={{ size: `23px` }}>
-                <div>
-                  <PiSunLight />
-                </div>
-              </IconContext.Provider>
-            </div>
-          </button>
+          <ThemeButton />
 
           <I18nButton />
 

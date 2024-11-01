@@ -10,8 +10,11 @@ function GhLink({ base_link, className }) {
       className={`flex justify-start items-center before:mx-0.5 ${className}`}
     >
       <IconContext.Provider value={{ size: `18px`, className: "mr-0.5" }}>
-        <div>
-          <FaGithub />
+        <div className="hidden dark:block">
+          <FaGithub style={{ fill: "white" }} />
+        </div>
+        <div className="dark:hidden">
+          <FaGithub style={{ fill: "black" }} />
         </div>
       </IconContext.Provider>
       <Link href={git_url} text={base_link} />

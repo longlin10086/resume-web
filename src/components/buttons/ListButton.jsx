@@ -17,12 +17,15 @@ function ListButton() {
       <button
         onClick={toggleHover}
         onMouseLeave={() => setHover(false)}
-        className="flex justify-center items-center border-3 rounded-full bg-neutral-100/95 hover:ring-2 hover:ring-blue-500/50 ease-in-out duration-500 mt-1 mx-2 sm:hidden"
+        className="flex justify-center items-center border-3 rounded-full bg-neutral-100/95 dark:bg-neutral-900/95 hover:ring-2 hover:ring-blue-500/50 ease-in-out duration-500 mt-1 mx-2 sm:hidden"
       >
         <div className="m-2.5 shadow-2xl z-10">
           <IconContext.Provider value={{ size: `18px` }}>
-            <div>
-              <FaListUl />
+            <div className="hidden dark:block">
+              <FaListUl style={{ fill: "white" }} />
+            </div>
+            <div className="dark:hidden">
+              <FaListUl style={{ fill: "black" }} />
             </div>
           </IconContext.Provider>
         </div>
