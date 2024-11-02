@@ -1,6 +1,8 @@
 import { createContext } from "react";
 
 export const ThemeContext = createContext({
-  dark: false,
+  dark: window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? true
+    : false,
   setDark: () => {},
 });

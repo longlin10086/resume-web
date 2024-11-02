@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { ThemeContext } from "../contexts/ThemeContext";
 
 import { PiSunLight } from "react-icons/pi";
@@ -10,8 +10,26 @@ function ThemeButton() {
 
   const toggleDark = () => {
     setDark((preMode) => (preMode = !preMode));
-    document.body.classList.toggle("dark");
   };
+
+  useEffect(() => {
+    // Add listener to update styles
+    window
+      .matchMedia("(prefers-color-scheme: dark)")
+      .addEventListener("change", (e) => setDark(e.matches ? true : false));
+
+    // Setup dark/light mode for the first time
+    setDark(
+      window.matchMedia("(prefers-color-scheme: dark)").matches ? true : false
+    );
+
+    // Remove listener
+    return () => {
+      window
+        .matchMedia("(prefers-color-scheme: dark)")
+        .removeEventListener("change", () => {});
+    };
+  }, []);
 
   return (
     <button

@@ -3,11 +3,23 @@ import Page from "./components/page";
 import Footer from "./components/Footer";
 import { LanguageContext } from "./components/contexts/LanguageContext";
 import { ThemeContext } from "./components/contexts/ThemeContext";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function App() {
   const [language, setLanguage] = useState("");
-  const [dark, setDark] = useState(false);
+  const [dark, setDark] = useState(
+    window.matchMedia("(prefers-color-scheme: dark)").matches ? true : false
+  );
+
+  useEffect(()=>{
+    if (dark) {
+      document.body.classList.add("dark");
+    } else {
+      document.body.classList.remove("dark");
+    }
+  }, [dark])
+
+
   return (
     <div className="bg-hero dark:bg-dkhero bg-cover w-full h-full min-h-screen ease-in-out duration-300">
       <LanguageContext.Provider value={[language, setLanguage]}>
