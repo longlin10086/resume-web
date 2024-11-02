@@ -1,14 +1,14 @@
-[header]
+[header]                    # 网站主标题
 name="李龙麟的个人简介"
 
-[titles]
+[titles]                    # 子标题
 education = "教育背景"
 projects = "项目开发"
 clubs = "社团活动"
 skills = "专业技能"
 misc = "其他"
 
-[info]
+[info]                      # 简历基本信息
 name = "李龙麟"
 phone = "(+86) 155-xxxx-xxxx"
 email = "gnulonglin@gmail.com"
@@ -16,18 +16,18 @@ github_username = "longlin10086"
 blog = "blog.longlin.tech"
 position = ["深圳", "广州"]
 
-[education]
-school = "哈尔滨工业大学(深圳)"
+[education]                             # 教育背景
+school = "哈尔滨工业大学(深圳)"             
 year = "2022.09 - 2026.06(预计)"
 major = "本科，自动化"
-contents = [
+contents = [                         
     "第一届 405杯CTF夺旗赛 最佳极客",
     "RoboMaster 2024 机甲大师超级对抗赛·区域赛(南部赛区) 一等奖", 
     "RoboMaster 2024 机甲大师超级对抗赛·全国赛 二等奖",
     "2023 年全国大学生数学建模竞赛 三等奖"
 ]
 
-[[clubs]]
+[[clubs]]                               # 社团活动（[[]] 表示该部分支持多个配置）
 name = "HITSZ OSA 开源技术协会"
 description = "社团主席团成员"
 year = "2023.10 - 至今"
@@ -41,7 +41,7 @@ contents = [
     "基于 PySide6 开发的节点监视面板。"
 ]
 
-[[projects]]
+[[projects]]                            # 项目开发
 name = "hoa.moe"
 subtitle = "面向 HITSZ 自动化学生的课程攻略共享计划。"
 description = "合作项目，旨在帮助学生更好地了解专业课程"
@@ -74,7 +74,7 @@ contents = [
     "响应式布局，能同时满足桌面端和移动端的需求。",
 ]
 
-[skills]
+[skills]                    # 专业技能 SkillsIcons 具体用法参见：https://github.com/tandpfun/skill-icons#readme
 contents = [
     "html",
     "css",
@@ -93,7 +93,7 @@ contents = [
     "nginx",
 ]
 
-[misc]
+[misc]                      # 其它
 contents = [
     "语言： 中文、英文(CET-6)。"
 ]
