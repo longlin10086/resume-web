@@ -24,7 +24,7 @@ function Entry({
   return (
     <div className="w-full mt-1 flex-row justify-start items-center mb-2">
       <div className="flex justify-between items-start">
-        <div className="flex justify-start items-center flex-wrap">
+        <div className="flex justify-start items-end">
           <h2 className="text-lg font-bold text-nowrap">{tl}</h2>
           <h2
             className={
@@ -37,7 +37,7 @@ function Entry({
           </h2>
           {is_git ? (
             <a href={tr}>
-              <RiExternalLinkLine className="block sm:hidden mx-1" />
+              <RiExternalLinkLine className="block sm:hidden mx-1 items-end" />
             </a>
           ) : (
             <div></div>
@@ -45,7 +45,10 @@ function Entry({
         </div>
         <div className="">
           {is_git ? (
-            <GhLink base_link={remain_path} className="hidden sm:flex" />
+            <GhLink
+              base_link={remain_path}
+              className="hidden sm:flex align-text-bottom"
+            />
           ) : (
             <p className={`text-nowrap hidden sm:block`}>{tr}</p>
           )}

@@ -52,6 +52,18 @@ contents = [
     "Backend periodically crawls README texts from course repositories and provides them for frontend display;",
     "Currently achieved 100K+ visits."
 ]
+
+[[projects]]
+name = "resume-web"
+subtitle = "A web-based personal resume template"
+description = "A personal project enabling creation of elegant resume websites through simple text configuration"
+gh_url = "https://github.com/longlin10086/resume-web"
+contents = [
+"Developed with Vite + React + TailwindCSS, supporting containerized deployment;",
+"Implemented dynamic text content import using TOML configuration files for simple and intuitive setup;",
+"Features light/dark theme modes and English/Chinese language switching."
+]
+
 [[projects]]
 name = "speak-insincerely"
 subtitle = "A Small Game about Large Language Models"
@@ -62,6 +74,7 @@ contents = [
     "Backend integrates large language models with asynchronous message sending and receiving, ensuring isolation;",
     "Deployed quickly using Docker."
 ]
+
 [[projects]]
 name = "HITSZ-Login-Panel"
 subtitle = "School System Login Interface"

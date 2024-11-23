@@ -41,37 +41,48 @@ contents = [
     "基于 PySide6 开发的节点监视面板。"
 ]
 
-[[projects]]                            # 项目开发
+[[projects]]
 name = "hoa.moe"
-subtitle = "面向 HITSZ 自动化学生的课程攻略共享计划。"
-description = "合作项目，旨在帮助学生更好地了解专业课程"
+subtitle = "HITSZ 自动化专业课程资源共享平台"
+description = "团队协作项目，致力于打造完整的专业课程学习指南"
 gh_url = "https://github.com/HITSZ-OpenAuto/hoa-moe"
 contents = [
-    "(主要开发者)参与了前端设计与 CI/CD 脚本构建;",
-    "基于 Hugo 架构搭建现代网页前端，方便用户阅读访问;",
-    "后端通过爬虫定期抓取各课程仓库 README 文本并提供给前端展示;",
-    "目前已获得 100K+ 次访问。"
+    "作为核心开发者主导前端架构设计与自动化部署流程优化;",
+    "采用 Hugo 静态网站生成器实现高性能、易维护的前端界面;",
+    "设计爬虫服务定时同步课程仓库内容，实现数据自动化更新;",
+    "项目累计点击量超过 10 万次，深受师生好评。"
+]
+
+[[projects]]
+name = "resume-web"
+subtitle = "轻量级在线简历生成器"
+description = "独立开发的个性化在线简历构建工具"
+gh_url = "https://github.com/longlin10086/resume-web"
+contents = [
+    "基于 Vite + React + TailwindCSS 技术栈开发，实现容器化部署;",
+    "创新性地引入 TOML 配置文件管理简历内容，降低使用门槛;",
+    "实现了暗色亮色主题切换与中英文国际化功能，提升用户体验。"
 ]
 
 [[projects]]
 name = "speak-insincerely"
-subtitle = " 一个关于大语言模型的小游戏。"
-description = "个人项目，玩家在遵守规则前提下让大语言模型给出特定回答"
+subtitle = "LLM 交互式游戏平台"
+description = "创新性探索大语言模型交互边界的游戏项目"
 gh_url = "https://github.com/longlin10086/speak-insincerely"
 contents = [
-    "前端基于 Gradio 框架开发，可以方便地添加目标组件;",
-    "后端接入大语言模型，消息收发异步进行，保证隔离性;",
-    "使用 docker 进行快速部署。"
+    "基于 Gradio 框架搭建模块化前端界面，支持灵活扩展;",
+    "采用异步架构设计实现 LLM 服务解耦，确保系统稳定性;",
+    "引入容器技术实现一键部署，提升开发效率。"
 ]
 
 [[projects]]
 name = "HITSZ-Login-Panel"
-subtitle = " 学校系统登录界面"
-description = "个人项目，一个整洁美观的登录界面"
+subtitle = "校园系统统一登录界面"
+description = "现代化的用户认证系统界面设计"
 gh_url = "https://github.com/longlin10086/HITSZ-GPT-Panel-LoginPage"
 contents = [
-    "使用原生 Vue3 编写，采用单文件组件架构组织项目;",
-    "响应式布局，能同时满足桌面端和移动端的需求。",
+    "基于 Vue3 组合式 API 开发，采用模块化组件设计提升代码复用性;",
+    "实现响应式布局设计，完美适配多端显示需求。"
 ]
 
 [skills]                    # 专业技能 SkillsIcons 具体用法参见：https://github.com/tandpfun/skill-icons#readme
