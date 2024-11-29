@@ -23,18 +23,18 @@ function Entry({
 
   return (
     <div className="w-full mt-1 flex-row justify-start items-center mb-2">
-      <div className="flex justify-between items-start">
-        <div className="flex justify-start items-end">
-          <h2 className="text-lg font-bold text-nowrap">{tl}</h2>
-          <h2
+      <div className="flex justify-between items-end">
+        <div className="flex justify-start items-center">
+          <h2 className="text-lg font-bold text-nowrap leading-4">{tl}</h2>
+          <h4
             className={
               tl_comment && language !== "en"
-                ? "before:content-['·'] before:mx-1 text-nowrap hidden sm:block text-sm"
+                ? "before:content-['·'] before:mx-1 text-nowrap hidden sm:block text-sm leading-4"
                 : ""
             }
           >
             {language !== "en" ? tl_comment : ""}
-          </h2>
+          </h4>
           {is_git ? (
             <a href={tr}>
               <RiExternalLinkLine className="block sm:hidden mx-1 items-end" />
