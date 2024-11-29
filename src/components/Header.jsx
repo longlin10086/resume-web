@@ -26,7 +26,7 @@ function Header() {
         <div className="flex mx-2 text-nowrap">
           <a
             href="#"
-            className="text-xl dark:text-slate-50 text-slate-950 hover:text-cyan-600 m-2 flex-row items-start font-zhuque font-bold before:content-['📄'] mx-0.5"
+            className="text-xl hover:text-cyan-600 m-2 flex-row items-start font-zhuque font-bold before:content-['📄'] mx-0.5"
           >
             {title}
           </a>
