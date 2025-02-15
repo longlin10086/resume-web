@@ -6,7 +6,7 @@ import { ThemeContext } from "./components/contexts/ThemeContext";
 import { useState, useEffect } from "react";
 
 import { Analytics } from "@vercel/analytics/react"
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { SpeedInsights } from "@vercel/speed-insights/react"
 
 function App() {
   const [language, setLanguage] = useState("");
@@ -35,13 +35,13 @@ function App() {
               <Page />
             </div>
           </div>
+          <Analytics/>
+          <SpeedInsights/>
           <div className="flex justify-center">
             <Footer />
           </div>
         </ThemeContext.Provider>
       </LanguageContext.Provider>
-      <Analytics/>
-      <SpeedInsights/>
     </div>
   );
 }
