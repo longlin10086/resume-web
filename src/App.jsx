@@ -5,6 +5,9 @@ import { LanguageContext } from "./components/contexts/LanguageContext";
 import { ThemeContext } from "./components/contexts/ThemeContext";
 import { useState, useEffect } from "react";
 
+import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
+
 function App() {
   const [language, setLanguage] = useState("");
   const [dark, setDark] = useState(
@@ -37,6 +40,8 @@ function App() {
           </div>
         </ThemeContext.Provider>
       </LanguageContext.Provider>
+      <Analytics/>
+      <SpeedInsights/>
     </div>
   );
 }
